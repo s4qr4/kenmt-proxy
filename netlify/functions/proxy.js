@@ -45,7 +45,7 @@
     };
   }
 
-  export const handler = async (event) => {
+  exports.handler = async (event) => {
     const rawPath = event.path || "/";
     const path = rawPath.replace(/^/.netlify\/functions\/proxy/, "") || "/";
     const method = event.httpMethod;
